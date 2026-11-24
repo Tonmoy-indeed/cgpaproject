@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="520.0" prefWidth="780.0" spacing="24.0" style="-fx-background-color: #e6f4ea;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cgpaproject.PrimaryController">
+
+    <padding>
+        <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
+    </padding>
+
+    <VBox prefWidth="340.0" spacing="16.0" style="-fx-background-color: #f1f8f5; -fx-background-radius: 10; -fx-border-color: #1e293b; -fx-border-radius: 10; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+        </padding>
+
+        <Label prefHeight="40.0" prefWidth="120.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add Course" textFill="#0f172a" />
+
+        <VBox spacing="5.0">
+            <Label prefHeight="25.0" prefWidth="103.0" text="Course Name">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
+            <TextField fx:id="nameField" prefHeight="40.0" prefWidth="290.0" promptText="Enter Course Name" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #1e293b;" />
+        </VBox>
+
+              <VBox spacing="5.0">
+         <Label prefHeight="25.0" prefWidth="103.0" text="Credits">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="creditField" prefHeight="40.0" prefWidth="290.0" promptText="Enter Credits Here" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #1e293b;" />
+        </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="103.0" text="Obtained Marks ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="marksField" prefHeight="40.0" prefWidth="290.0" promptText="Enter Marks Here" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #1e293b;" />
+         </children>
+      </VBox>
+   
+                       <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#addCourse" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: #1e293b; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Course" />
+    </VBox>
+
+    <VBox prefWidth="360.0" spacing="16.0" style="-fx-background-color: #f1f8f5; -fx-background-radius: 10; -fx-border-color: #1e293b; -fx-border-radius: 10; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+        </padding>
+
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Course Overview" />
+
+        <TextArea fx:id="outputArea" editable="false" promptText="Courses Will Show Here" style="-fx-font-family: monospace;" wrapText="true" VBox.vgrow="ALWAYS" />
+    </VBox>
+
+</HBox>
